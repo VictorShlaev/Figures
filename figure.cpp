@@ -10,7 +10,7 @@ void Figure::initializeGL()
     GLuint vertexShaderId = createShader(vertexShader,GL_VERTEX_SHADER);
     GLuint fragmentShaderId = createShader(fragmentShader,GL_FRAGMENT_SHADER);
     program = createProgram({vertexShaderId, fragmentShaderId});
-    glClearColor(0.8, 1.0, 0.6, 1.0);
+    glClearColor(0.6, 0.6, 0.6, 1.0);
 }
 
 void Figure::paintGL()

@@ -14,13 +14,13 @@ Rect::Rect(formData::Rectangle form, QWidget *parent):Figure(parent){
     };
 
     vertexColors = {
-        0.0, 0.0, 1.0,
-        1.0, 1.0, 0.0,
-        0.0, 1.0, 1.0,
+        0.51f, 0.24f, 0.24f,
+        0.51f, 0.24f, 0.24f,
+        0.51f, 0.24f, 0.24f,
 
-        0.0, 0.0, 1.0,
-        1.0, 1.0, 0.0,
-        0.0, 1.0, 1.0,
+        0.51f, 0.24f, 0.24f,
+        0.51f, 0.24f, 0.24f,
+        0.51f, 0.24f, 0.24f
     };
 
 }
@@ -50,7 +50,7 @@ void Rect::paintGL()
     std::array<GLuint, 2> vboIds;
     glGenBuffers(2, vboIds.data());
     GLint attributeCoord2d = bindProgram(vertexes, vboIds, 0, "coord2d", 2, program, 2 );
-    GLint attributeColor = bindProgram(vertexColors, vboIds, 1, "color",3, program,2);
+    GLint attributeColor = bindProgram(vertexColors, vboIds, 1, "color",3, program,3);
     glDrawArrays( GL_TRIANGLES, 0, 6);
     glDisableVertexAttribArray(attributeCoord2d);
     glDisableVertexAttribArray(attributeColor);

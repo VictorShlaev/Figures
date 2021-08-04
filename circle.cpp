@@ -28,7 +28,7 @@ Circle::~Circle(){
 void Circle::paintGL()
 {
 
-    uint unVertexArraySize = 2000;
+    uint unVertexArraySize = 500;
     float fDegrees = 0;
     std::vector<GLfloat> fVert(unVertexArraySize*3);
     std::vector<GLfloat> fColor(unVertexArraySize*3);
@@ -41,11 +41,13 @@ void Circle::paintGL()
 
         fDegrees += (360./unVertexArraySize);
 
-        fColor[i] = 0.1f;
-        fColor[i+1] = 0.0f;
-        fColor[i+2] = 0.0f;
+        fColor[i] = 0.51f;
+        fColor[i+1] = 0.24f;
+        fColor[i+2] = 0.24f;
+
     }
     glClear(GL_COLOR_BUFFER_BIT);
+    glLineWidth(5);
     glUseProgram(program);
     std::array<GLuint, 2> vboIds;
     glGenBuffers(2, vboIds.data());

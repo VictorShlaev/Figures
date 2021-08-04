@@ -5,7 +5,7 @@ Triangle::Triangle(formData::Triangle form, QWidget* parent): Figure(parent)
     a = distance(form.cx,form.cy, form.bx, form.by);
     b = distance(form.ax, form.ay, form.cx, form.cy);
     c = distance(form.ax, form.ay, form.bx, form.by);
-    qDebug()<<" a: "<<a<<" b: "<<b<<" c: "<<c;
+
     if (a + b > c and a + c > b and b + c > a){
         triangleVertexes = {
             form.ax, form.ay,
@@ -13,9 +13,9 @@ Triangle::Triangle(formData::Triangle form, QWidget* parent): Figure(parent)
             form.cx, form.cy
         };
         triangleColors={
-            0.0, 0.0, 1.0,
-            0.0, 1.0, 0.0,
-            1.0, 0.0, 1.0
+            0.51, 0.24, 0.24,
+            0.51, 0.24, 0.24,
+            0.45, 0.24, 0.24
         };
 
     }else{
